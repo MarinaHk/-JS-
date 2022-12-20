@@ -94,12 +94,12 @@ function initSlider(images, options) {
     sliderImages.querySelector(`.n${num}`).classList.add("active");
     
     if (options.titles) {
-      let title = document.querySelector(".projects-navig_item");
-    /* titles.querySelector(".active").classList.remove("active");
-      titles.querySelector(`.n${num}`).classList.add("active");*/
+      let titleHTML = document.querySelector(".projects-navig_item");
+    /*titleHTML.querySelector(".active").classList.remove("active");
+      titleHTML.querySelector(`.n${num}`).classList.add("active");*/
       
-     if (images[num].title) {
-        title.innerText = images[num].title;
+   if (images[num].title) {
+        titleHTML.innerText = images[num].title;
       }
     }
     
@@ -160,19 +160,19 @@ function initSlider(images, options) {
   }
   
   function initTitles() {
-    let titles = document.querySelector(".projects-navig");
-     titles.dataset.index = index;
-        
+    let titleHTML = document.querySelector(".projects-navig");
+     sliderImages.innerHTML += titleHTML;
+ 
      images.forEach((image, index) => {
       let title = document.querySelector(".projects-navig_item"); //создание точнки
-      title.className = `.projects-navig_item n${index} ${index? "" : "active"}`; //добавление стиля, порядкового номера
+      title.className = `projects-navig_item n${index} ${index? "" : "active"}`; //добавление стиля, порядкового номера
       title.dataset.index = index;
       title.addEventListener("click", function() {
         moveSlider(this.dataset.index);
       });
-      titles.appendChild(title);
+      titleHTML.appendChild(title);
     });
-    sliderKarusel.appendChild(titles);
+    sliderKarusel.appendChild(titleHTML);
   }
   
  
