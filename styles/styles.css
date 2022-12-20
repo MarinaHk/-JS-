@@ -26,10 +26,7 @@ body * {
 .projects-navig_item {
   margin-right: 60.5px;
 }
-.projects-navig_item a:hover {
-color: #E3B873;
-text-decoration-line: underline;
-}
+
 .projects-navig_item a {
   text-decoration: none;
   font-family: 'Yeseva One';
@@ -40,6 +37,11 @@ text-decoration-line: underline;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.3);
 }
+.projects-navig_item a:hover, .projects-navig_item a:active {
+color: #E3B873;
+text-decoration-line: underline;
+}
+
 .container_projects_2 {
   width: 442px;
   margin-left: 0px;
