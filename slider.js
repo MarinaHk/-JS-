@@ -94,7 +94,7 @@ function initSlider(images, options) {
     sliderImages.querySelector(`.n${num}`).classList.add("active");
     
     if (options.titles) {
-      let titleHTML = document.querySelector(".projects-navig_item");
+      let titleHTML = document.querySelector(".projects-navig_item a");
     /*titleHTML.querySelector(".active").classList.remove("active");
       titleHTML.querySelector(`.n${num}`).classList.add("active");*/
       
